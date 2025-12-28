@@ -1,0 +1,40 @@
+{
+    "name": "hidevs/media-module",
+    "description": "",
+    "type": "laravel-module",
+    "authors": [
+        {
+            "name": "HiDevs Studioi",
+            "email": "hidevs.studio@gmail.com"
+        }
+    ],
+    "require": {
+        "hidevs/general-module": "dev-main",
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "spatie/laravel-medialibrary": "^11.12"
+    },
+    "extra": {
+        "module-dir": "Media",
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Media\\": "app/",
+            "Modules\\Media\\Database\\Factories\\": "database/factories/",
+            "Modules\\Media\\Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "./helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Media\\Tests\\": "tests/"
+        }
+    }
+}
